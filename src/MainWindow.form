@@ -18,8 +18,8 @@
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="5d254" layout-manager="GridBagLayout">
-            <constraints border-constraint="Center"/>
+          <grid id="5d254" binding="menuPnl" layout-manager="GridBagLayout">
+            <constraints border-constraint="Last"/>
             <properties>
               <preferredSize width="70" height="310"/>
             </properties>
@@ -109,12 +109,6 @@
           <vspacer id="81c6d">
             <constraints/>
           </vspacer>
-          <hspacer id="2ef56">
-            <constraints/>
-          </hspacer>
-          <vspacer id="f4d6c">
-            <constraints/>
-          </vspacer>
           <grid id="fef2" binding="iconPnl" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints/>
             <properties>
@@ -146,6 +140,63 @@
               </component>
             </children>
           </grid>
+        </children>
+      </grid>
+      <grid id="ae941" binding="categoryPnl" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <preferredSize width="40" height="310"/>
+          <visible value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <vspacer id="e32fb">
+            <constraints/>
+          </vspacer>
+          <component id="6d4eb" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="200" height="16"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="365c8" class="javax.swing.JLabel" binding="categoryDisplayLbl">
+            <constraints/>
+            <properties>
+              <background color="-6580586"/>
+              <focusTraversalPolicyProvider value="false"/>
+              <font size="14"/>
+              <foreground color="-15630447"/>
+              <preferredSize width="150" height="16"/>
+              <text value="categoryDisplay"/>
+            </properties>
+          </component>
+          <component id="fc7a7" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="150" height="16"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="74ac7" class="javax.swing.JButton" binding="backBtn">
+            <constraints/>
+            <properties>
+              <preferredSize width="48" height="26"/>
+              <text value="&lt;&lt;"/>
+            </properties>
+          </component>
+          <component id="2b744" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+            <constraints/>
+            <properties>
+              <preferredSize width="120" height="26"/>
+            </properties>
+          </component>
+          <component id="653b6" class="javax.swing.JButton" binding="confirmSelectionBtn">
+            <constraints/>
+            <properties>
+              <text value="Confirm"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>
