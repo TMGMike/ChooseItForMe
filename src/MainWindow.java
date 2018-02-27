@@ -1,12 +1,6 @@
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.io.File;
-import java.net.URL;
 
 /**
  * Created by u1764905 on 13/02/2018.
@@ -23,7 +17,7 @@ public class MainWindow {
     private JButton confirmSelectionBtn;
     private JPanel categoryPnl;
     private JPanel menuPnl;
-    private JComboBox comboBox1;
+    private JComboBox categoryChoices;
     private JLabel categoryDisplayLbl;
     private JButton backBtn;
 
@@ -140,40 +134,40 @@ public class MainWindow {
         // 3 = Recipes
 
         if(category == 0) {
-            comboBox1.removeAllItems();
-            comboBox1.addItem("Action");
-            comboBox1.addItem("Comedy");
-            comboBox1.addItem("Horror");
-            comboBox1.addItem("Romance");
+            categoryChoices.removeAllItems();
+            categoryChoices.addItem("Action");
+            categoryChoices.addItem("Comedy");
+            categoryChoices.addItem("Horror");
+            categoryChoices.addItem("Romance");
         }
         else if(category == 1) {
-            comboBox1.removeAllItems();
-            comboBox1.addItem("RPG");
-            comboBox1.addItem("Action");
-            comboBox1.addItem("Comedy");
-            comboBox1.addItem("Open World");
-            comboBox1.addItem("Horror");
+            categoryChoices.removeAllItems();
+            categoryChoices.addItem("RPG");
+            categoryChoices.addItem("Action");
+            categoryChoices.addItem("Comedy");
+            categoryChoices.addItem("Open World");
+            categoryChoices.addItem("Horror");
         }
         else if(category == 2){
-            comboBox1.removeAllItems();
-            comboBox1.addItem("England");
-            comboBox1.addItem("America");
-            comboBox1.addItem("China");
-            comboBox1.addItem("France");
-            comboBox1.addItem("Germany");
-            comboBox1.addItem("Japan");
+            categoryChoices.removeAllItems();
+            categoryChoices.addItem("England");
+            categoryChoices.addItem("America");
+            categoryChoices.addItem("China");
+            categoryChoices.addItem("France");
+            categoryChoices.addItem("Germany");
+            categoryChoices.addItem("Japan");
         }
         else if(category == 3){
-            comboBox1.removeAllItems();
-            comboBox1.addItem("English");
-            comboBox1.addItem("Italian");
-            comboBox1.addItem("Chinese");
-            comboBox1.addItem("German");
-            comboBox1.addItem("French");
+            categoryChoices.removeAllItems();
+            categoryChoices.addItem("English");
+            categoryChoices.addItem("Italian");
+            categoryChoices.addItem("Chinese");
+            categoryChoices.addItem("German");
+            categoryChoices.addItem("French");
         }
     }
     public static void main(String[] args) {
-        final String VERSION = "0.3.5";
+        final String VERSION = "0.4.5";
         JFrame frame = new JFrame("Choose It For Me [" + VERSION + "]");
         frame.setContentPane(new MainWindow().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -185,7 +185,7 @@
               <text value="&lt;&lt;"/>
             </properties>
           </component>
-          <component id="2b744" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+          <component id="2b744" class="javax.swing.JComboBox" binding="categoryChoices">
             <constraints/>
             <properties>
               <preferredSize width="120" height="26"/>
