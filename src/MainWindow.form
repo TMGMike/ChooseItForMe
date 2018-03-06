@@ -21,22 +21,20 @@
           <grid id="5d254" binding="menuPnl" layout-manager="GridBagLayout">
             <constraints border-constraint="Last"/>
             <properties>
+              <background color="-1"/>
               <preferredSize width="70" height="310"/>
             </properties>
             <border type="none"/>
             <children>
-              <vspacer id="6de8">
-                <constraints>
-                  <grid row="0" column="0" row-span="7" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
               <component id="26177" class="javax.swing.JButton" binding="moviesButton">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
+                  <borderPainted value="false"/>
+                  <foreground color="-1"/>
+                  <hideActionText value="false"/>
                   <text value="TV/Movies"/>
                 </properties>
               </component>
@@ -46,6 +44,8 @@
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
+                  <borderPainted value="false"/>
+                  <foreground color="-1"/>
                   <text value="Games"/>
                 </properties>
               </component>
@@ -55,6 +55,8 @@
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
+                  <borderPainted value="false"/>
+                  <foreground color="-1"/>
                   <text value="Places"/>
                 </properties>
               </component>
@@ -64,33 +66,46 @@
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
                 <properties>
+                  <borderPainted value="false"/>
+                  <foreground color="-1"/>
                   <text value="Recipes"/>
                 </properties>
               </component>
-              <vspacer id="738c9">
+              <component id="1dd03" class="javax.swing.JSeparator">
                 <constraints>
-                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0" ipady="10"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="5c1bb" class="javax.swing.JSeparator">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0" ipady="10"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="c63f4" class="javax.swing.JSeparator">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0" ipady="10"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="c5ca3" class="javax.swing.JSeparator">
+                <constraints>
+                  <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0" ipady="10"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="91031" class="javax.swing.JSeparator" binding="leftSeparator">
+                <constraints>
+                  <grid row="0" column="0" row-span="7" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                   <gridbag weightx="0.0" weighty="0.0"/>
                 </constraints>
-              </vspacer>
-              <vspacer id="e544e">
-                <constraints>
-                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
-              <vspacer id="be9ad">
-                <constraints>
-                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0"/>
-                </constraints>
-              </vspacer>
-              <vspacer id="efeb">
-                <constraints>
-                  <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                  <gridbag weightx="0.0" weighty="0.0" ipady="40"/>
-                </constraints>
-              </vspacer>
+                <properties/>
+              </component>
             </children>
           </grid>
         </children>

@@ -20,16 +20,30 @@ public class MainWindow {
     private JComboBox categoryChoices;
     private JLabel categoryDisplayLbl;
     private JButton backBtn;
-
+    private JSeparator leftSeparator;
+    private int categoryID = 0;
     public MainWindow() {
         // ImageIcon image = new ImageIcon(new ImageIcon("tmg_logo_round256.png").getImage().getScaledInstance(64,64, Image.SCALE_DEFAULT));
        // categoryPnl.setVisible(false);
         //menuPnl.setVisible(true);
+        iconPnl.setBackground(new Color(255,255,255));
+        menuPnl.setBackground(new Color(255,255,255));
+        categoryPnl.setBackground(new Color(255,255,255));
+        centrePnl.setBackground(new Color(255,255,255));
+        panel1.setBackground(new Color(255,255,255));
 
+        placesButton.setBackground(new Color(255,255,255));
+        gamesButton.setBackground(new Color(255,255,255));
+        recipesButton.setBackground(new Color(255,255,255));
+        moviesButton.setBackground(new Color(255,255,255));
+
+        placesButton.setForeground(new Color(255,255,255));
+        gamesButton.setForeground(new Color(255,255,255));
+        recipesButton.setForeground(new Color(255,255,255));
+        moviesButton.setForeground(new Color(255,255,255));
         centreLbl.setIcon(new ImageIcon(getClass().getResource("tmg_logo_round144.png")));
        // centreLbl.setMaximumSize(iconPnl.getSize());
        // centreLbl.setSize(iconPnl.getSize());
-
 
         moviesButton.addActionListener(new ActionListener() {
             @Override
@@ -110,7 +124,6 @@ public class MainWindow {
                 if(e.getKeyCode() == 27){
                     menuPnl.setVisible(true);
                     categoryPnl.setVisible(false);
-
                 }
             }
         });
@@ -126,15 +139,20 @@ public class MainWindow {
                 }
             }
         });
+        playAnimation(moviesButton);
+        playAnimation(gamesButton);
+        playAnimation(placesButton);
+        playAnimation(recipesButton);
     }
     private void setComboBoxItems(int category){
         // 0 = TV/Movies
         // 1 = Games
         // 2 = Places
         // 3 = Recipes
-
+        categoryID = category;
         if(category == 0) {
             categoryChoices.removeAllItems();
+
             categoryChoices.addItem("Action");
             categoryChoices.addItem("Comedy");
             categoryChoices.addItem("Horror");
@@ -166,13 +184,51 @@ public class MainWindow {
             categoryChoices.addItem("French");
         }
     }
+
+    public void playAnimation (JButton button) {
+        Runner runner = new Runner();
+        Thread t = new Thread(runner);
+        runner.setButton(button);
+        t.start();
+        System.out.println("The current button colour is: " + button.getBackground());
+    }
+
+
     public static void main(String[] args) {
-        final String VERSION = "0.4.5";
+        final String VERSION = "0.6.5";
         JFrame frame = new JFrame("Choose It For Me [" + VERSION + "]");
         frame.setContentPane(new MainWindow().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
         frame.setMinimumSize(new Dimension(547,534));
+    }
+}
+
+class Runner implements Runnable {
+    private JButton button;
+    @Override
+    public void run() {
+
+        int backI = 255;
+        int foreI = 1;
+        int wait = 0;
+
+        while(backI != 160) {
+            while(wait != 500) {
+                System.out.println("adding - " + wait);
+                wait++;
+            }
+            backI--;
+
+            System.out.println("Adding 1 to colour. " + button.getBackground().toString());
+            button.setForeground(new Color(foreI,foreI,foreI));
+            button.setBackground(new Color(backI,backI,backI));
+            foreI+=3;
+            wait = 0;
+        }
+    }
+    void setButton(JButton button){
+        this.button = button;
     }
 }
