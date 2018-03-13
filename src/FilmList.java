@@ -13,6 +13,7 @@ public class FilmList extends DefaultListModel<Film> {
     }
     public void addFilm(Film film){
         super.addElement(new Film(film.getTitle(), film.getImagePath(), film.getImdbRating(), film.getYear()));
+
     }
     public Film getFilmByTitle(String title){
         Film film;

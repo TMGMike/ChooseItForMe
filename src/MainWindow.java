@@ -22,6 +22,7 @@ public class MainWindow {
     private JButton backBtn;
     private JSeparator leftSeparator;
     private int categoryID = 0;
+
     public MainWindow() {
         // ImageIcon image = new ImageIcon(new ImageIcon("tmg_logo_round256.png").getImage().getScaledInstance(64,64, Image.SCALE_DEFAULT));
        // categoryPnl.setVisible(false);
@@ -41,9 +42,11 @@ public class MainWindow {
         gamesButton.setForeground(new Color(255,255,255));
         recipesButton.setForeground(new Color(255,255,255));
         moviesButton.setForeground(new Color(255,255,255));
+
+
         centreLbl.setIcon(new ImageIcon(getClass().getResource("tmg_logo_round144.png")));
-       // centreLbl.setMaximumSize(iconPnl.getSize());
-       // centreLbl.setSize(iconPnl.getSize());
+
+        String[] images = new String[]{"beef wellington.png", "toast.png", "pizza.png"};
 
         moviesButton.addActionListener(new ActionListener() {
             @Override
@@ -143,6 +146,16 @@ public class MainWindow {
         playAnimation(gamesButton);
         playAnimation(placesButton);
         playAnimation(recipesButton);
+
+        confirmSelectionBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(categoryID == 0){
+                    Comedy movies = new Comedy();
+                    movies.setVisible(true);
+                }
+            }
+        });
     }
     private void setComboBoxItems(int category){
         // 0 = TV/Movies
@@ -216,16 +229,22 @@ class Runner implements Runnable {
 
         while(backI != 160) {
             while(wait != 500) {
-                System.out.println("adding - " + wait);
+                System.out.println();
                 wait++;
             }
             backI--;
 
+
+            try {
+                button.setForeground(new Color(foreI,foreI,foreI));
+                button.setBackground(new Color(backI,backI,backI));
+                foreI+=3;
+                wait = 0;
+            }catch (Exception ignored){
+
+            }
             System.out.println("Adding 1 to colour. " + button.getBackground().toString());
-            button.setForeground(new Color(foreI,foreI,foreI));
-            button.setBackground(new Color(backI,backI,backI));
-            foreI+=3;
-            wait = 0;
+
         }
     }
     void setButton(JButton button){

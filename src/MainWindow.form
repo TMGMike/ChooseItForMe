@@ -149,6 +149,7 @@
                 <constraints border-constraint="South"/>
                 <properties>
                   <font name="Gill Sans MT" size="16" style="1"/>
+                  <foreground color="-15630447"/>
                   <horizontalAlignment value="0"/>
                   <text value="Choose It For Me"/>
                 </properties>
