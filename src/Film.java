@@ -47,4 +47,9 @@ public class Film {
         this.imdbRating = imdbRating;
         this.year = year;
     }
+
+    @Override
+    public String toString() {
+        return getTitle();
+    }
 }

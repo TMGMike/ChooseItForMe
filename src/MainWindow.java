@@ -151,7 +151,44 @@ public class MainWindow {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(categoryID == 0){
-                    Comedy movies = new Comedy();
+                    FilmList films = new FilmList();
+                    if(categoryChoices.getSelectedItem().equals("Action")){
+                        films.addFilm("Die Hard", "", "8.2", "1988");
+                        films.addFilm("The Bourne Identity", "", "7.9", "2002");
+                        films.addFilm("Inception", "", "8.8", "2010");
+                        films.addFilm("Casino Royale", "", "8.0", "2006");
+                        films.addFilm("Kill Bill Vol.1", "", "8.1", "2003");
+                        films.addFilm("The Dark Knight","","9.0","2008");
+                        films.addFilm("Skyfall","","7.8","2012");
+                        films.addFilm("Taken","","6.6","2008");
+                        films.addFilm("John Wick","","7.3","2014");
+                        films.addFilm("Black Panther","","7.8","2018");
+                    }
+                    else if(categoryChoices.getSelectedItem().equals("Comedy")){
+                        films.addFilm("Ghostbusters","","7.8","1984");
+                        films.addFilm("Matilda","","6.9","1996");
+                        films.addFilm("21 Jump Street","","7.2","2012");
+                        films.addFilm("Pineapple Express","","7.0","2008");
+                        films.addFilm("Wedding Crashers","","7.0","2005");
+                        films.addFilm("Dumb and Dumber","","7.3","1994");
+                        films.addFilm("The Big Sick","","7.6","2017");
+                        films.addFilm("White Chicks","","5.5","2004");
+                        films.addFilm("The Hangover","","7.7","2009");
+                        films.addFilm("Four Lions","","7.3","2010");
+                    }
+                    else if (categoryChoices.getSelectedItem().equals("Horror")){
+                        films.addFilm("The Purge","","5.7","2013");
+                        films.addFilm("The Conjuring","","7.5","2013");
+                        films.addFilm("Sinister","","6.8","2012");
+                        films.addFilm("Get Out","","7.7","2017");
+                        films.addFilm("Paranormal Activity","6.3","","2007");
+                        films.addFilm("SAW","","7.6","2004");
+                        films.addFilm("Kill List","","6.4","2011");
+                        films.addFilm("IT","","7.5","2017");
+                        films.addFilm("The Host ","","5.9","2013");
+                        films.addFilm("Session 9","","6.5","2001");
+                    }
+                    Comedy movies = new Comedy(films);
                     movies.setVisible(true);
                 }
             }
