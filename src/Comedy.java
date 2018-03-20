@@ -18,6 +18,7 @@ public class Comedy {
     private JTextField yearTextField;
     private JTextField iMDbRatingTextField;
     private JLabel iMDbRating;
+    private JButton addNewButton;
     private String name;
     private String year;
     private String imdbRating;
